@@ -20,58 +20,58 @@
 
 /* HEAD */
 .head {
-  background-color: rgb(37, 37, 37);
+  /* background-color: rgb(37, 37, 37); */
 }
 
 .menubar {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 .menubar__logo {
 }
 .menubar__logoname {
-  color: white;
-  text-decoration: none;
+  /* color: white;
+  text-decoration: none; */
 }
 .menubar__left {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 .menubar__right {
-  display: flex;
-  overflow: hidden;
+  /* display: flex;
+  overflow: hidden; */
 }
 .menubar__right li {
-  margin: 1em;
-  padding: 0.1em;
+  /* margin: 1em;
+  padding: 0.1em; */
 }
 .menubar__right li > a {
-  color: white;
-  text-decoration: none;
+  /* color: white;
+  text-decoration: none; */
 }
 
 .main {
-  text-align: center;
+  /* text-align: center; */
 }
 .main__photo {
 }
 .main__title {
-  color: white;
+  /* color: white;
   font-size: 2.5em;
   font-weight: bold;
-  margin-top: -1em;
+  margin-top: -1em; */
 }
 .main__desc {
-  color: white;
-  font-weight: bold;
+  /* color: white;
+  font-weight: bold; */
 }
 .main__contact {
-  color: white;
+  /* color: white;
   background-color: transparent;
   border: 1px solid white;
   padding: 0.6em;
-  border-radius: 3px;
+  border-radius: 3px; */
 }
 
 /* ABOUT */
