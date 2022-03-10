@@ -368,3 +368,33 @@ p {
 .comment__man {
   color: var(--color-dark-pink);
 }
+
+/* contact */
+#contact {
+  background-color: var(--color-dark-pink);
+  text-align: center;
+  padding-top: 3em;
+}
+#contact > h1 {
+  color: var(--color-white);
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+.contact__title {
+  color: var(--color-white);
+}
+.contact__email {
+  color: var(--color-white);
+  margin-bottom: 0.8em;
+}
+.contact__links {
+  color: var(--color-white);
+}
+.contact__links i {
+  font-size: var(--font-large);
+  margin: 0 0.1em;
+}
+.contact__rights {
+  padding: 1.3em;
+  color: var(--color-light-white);
+}
