@@ -99,5 +99,26 @@ p {
 
 /* home */
 #home {
-  background-color: #4d4d4d;
+  background-color: #2b2b2b;
+  text-align: center;
+}
+.home__avatar {
+  margin-top: 5.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+}
+.home__title {
+  color: var(--color-white);
+}
+.home__description {
+  color: var(--color-white);
+}
+.home__contact {
+  margin: 1em 0 2em 0;
+  border: 1px solid var(--color-light-white);
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
+  background-color: transparent;
+  color: var(--color-light-white);
+  font-weight: var(--weight-semi-bold);
 }
