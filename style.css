@@ -25,17 +25,24 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* Size */
+  --border-radius: 4px;
 }
 
 /* Universal tags */
 * {
   padding: 0px;
   margin: 0px;
-
   box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
+
   font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 
 /* Typography */
@@ -70,11 +77,12 @@ p {
 
 /* navbar */
 #navbar {
-  position: fixed;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: var(--color-pink);
   align-items: center;
+  position: fixed;
+  width: 100%;
   padding: 1em;
 }
 .navbar__logo {
@@ -92,9 +100,17 @@ p {
   display: flex;
 }
 .navbar__menu__item {
+  padding: 4px 8px;
   margin: 0 0.6em 0 0.6em;
   cursor: pointer;
   color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 /* home */
