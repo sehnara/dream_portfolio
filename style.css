@@ -50,6 +50,10 @@ ul {
 .section {
   text-align: center;
   padding: 50px;
+
+  margin: auto;
+}
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -157,7 +161,6 @@ button {
 #about h1 {
 }
 #about > p {
-  width: 70%;
   margin: auto;
   font-weight: var(--weight-semi-bold);
 }
@@ -224,16 +227,15 @@ button {
 
 /* Skills */
 #skills {
-  background-color: var(--color-pink);
+  background-color: var(--color-yellow);
 }
 #skills > p {
   margin: auto;
-  width: 70%;
 }
 
 .skillset {
-  margin-top: 3em;
   display: flex;
+  margin: 20px 0;
   justify-content: center;
   align-items: center;
   background-color: var(--color-dark-grey);
@@ -247,10 +249,10 @@ button {
 }
 .skillset__left {
   flex: 3;
-  padding: 1.5em;
+  padding: 20px 40px;
 }
 .skill {
-  margin: 1.5em 1.5em;
+  margin-bottom: 1.5em;
 }
 .skill__description {
   display: flex;
@@ -262,15 +264,16 @@ button {
   font-size: var(--font-micro);
 }
 .skill__bar {
+  width: 100%;
   background-color: var(--color-grey);
   height: 3px;
+  border-radius: 15px;
 }
 .skill__value {
   background-color: var(--color-orange);
-  width: 200px;
+  width: 100%;
   height: 3px;
 }
-
 .skillset__right {
   flex: 2;
 }
