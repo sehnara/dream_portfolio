@@ -29,7 +29,13 @@
 
 /* Universal tags */
 * {
+  padding: 0px;
+  margin: 0px;
+
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Typography */
@@ -60,4 +66,38 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
+}
+
+/* navbar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+.navbar__logo img {
+}
+.navbar__logo a {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu__item {
+  margin: 0 0.6em 0 0.6em;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+/* home */
+#home {
+  background-color: #4d4d4d;
 }
