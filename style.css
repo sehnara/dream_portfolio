@@ -455,7 +455,6 @@ button {
 #contact > h1 {
   color: var(--color-white);
   margin: 0;
-  margin-bottom: 0.3em;
 }
 .contact__title {
   color: var(--color-white);
@@ -470,6 +469,12 @@ button {
 .contact__links i {
   font-size: var(--font-large);
   margin: 0 0.1em;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.contact__links i:hover {
+  color: var(--color-dark-grey);
+  transform: scale(1.2);
 }
 .contact__rights {
   padding: 1.3em;
