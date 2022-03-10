@@ -194,8 +194,10 @@ p {
 
 /* Skills */
 #skills {
+  margin-top: 1em;
   padding: 3em;
   text-align: center;
+  background-color: var(--color-pink);
 }
 #skills > p {
   margin: auto;
@@ -321,4 +323,48 @@ p {
 .project__description h3 {
 }
 .project__description span {
+}
+
+/* testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+  margin-top: 2em;
+  padding: 2em 2em;
+  text-align: center;
+}
+#testimonials > h3 {
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: 2em;
+}
+
+.testimonials__comments {
+}
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.comment__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.comment__speech-buble {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.comment__speech-buble p {
+  color: var(--color-light-grey);
+}
+.comment__company {
+  font-weight: var(--weight-semi-bold);
+}
+.comment__man {
+  color: var(--color-dark-pink);
 }
