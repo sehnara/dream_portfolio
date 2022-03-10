@@ -191,3 +191,81 @@ p {
   left: 70px;
   font-size: var(--font-micro);
 }
+
+/* Skills */
+#skills {
+  padding: 3em;
+  text-align: center;
+}
+#skills > p {
+  margin: auto;
+  width: 70%;
+}
+
+.skillset {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark-grey);
+}
+.skillset__title {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-light-white);
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.skillset__left {
+  flex: 3;
+  padding: 1.5em;
+}
+.skill {
+  margin: 1.5em 1.5em;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.skill__description span {
+  color: var(--color-light-white);
+  font-size: var(--font-micro);
+}
+.skill__bar {
+  background-color: var(--color-grey);
+  height: 3px;
+}
+.skill__value {
+  background-color: var(--color-orange);
+  width: 200px;
+  height: 3px;
+}
+
+.skillset__right {
+  flex: 2;
+}
+.tools {
+  background-color: var(--color-grey);
+  padding: 1.5em;
+}
+.tools__list {
+}
+.tools__list li {
+}
+.tools__list li > span {
+  color: var(--color-light-white);
+  font-size: var(--font-small);
+}
+.etc {
+  background-color: var(--color-light-grey);
+  padding: 1.5em;
+}
+.etc__list {
+}
+.etc__list li {
+}
+.etc__list li > span {
+  color: var(--color-light-white);
+  font-size: var(--font-small);
+}
