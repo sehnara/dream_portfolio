@@ -269,3 +269,56 @@ p {
   color: var(--color-light-white);
   font-size: var(--font-small);
 }
+
+/* works  */
+#work {
+  margin: 0 1em;
+  text-align: center;
+}
+#work > h3 {
+  font-weight: var(--weight-bold);
+  margin-bottom: 2em;
+}
+.work__categories {
+}
+.category__btn {
+  width: 150px;
+  height: 30px;
+  background-color: var(--color-light-white);
+  border-radius: 5px;
+  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-weight: var(--weight-semi-bold);
+}
+.category__btn:hover {
+  background-color: var(--color-dark-pink);
+  color: var(--color-white);
+}
+.category__count {
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 0 0.4em;
+}
+
+.work__projects {
+  margin: auto;
+  margin-top: 2em;
+  width: 1200px;
+}
+.project {
+}
+.project__img {
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-light-white);
+}
+
+.project__description {
+  display: none;
+}
+.project__description h3 {
+}
+.project__description span {
+}
