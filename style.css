@@ -28,6 +28,9 @@
 
   /* Size */
   --border-radius: 4px;
+
+  /* Animation duration */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -43,6 +46,12 @@ a {
 }
 ul {
   list-style: none;
+}
+.section {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Typography */
@@ -121,7 +130,6 @@ button {
 /* home */
 #home {
   background-color: #2b2b2b;
-  text-align: center;
   padding: 40px;
 }
 .home__avatar {
@@ -145,10 +153,8 @@ button {
 
 /* about */
 #about {
-  text-align: center;
 }
 #about h1 {
-  margin-top: 1em;
 }
 #about > p {
   width: 70%;
@@ -156,7 +162,7 @@ button {
   font-weight: var(--weight-semi-bold);
 }
 .about__majors {
-  margin: 5em 0 3em 0;
+  margin: 3em 0 3em 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -167,20 +173,24 @@ button {
   width: 300px;
 }
 .major__icon {
-  width: 130px;
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
   border: 2px solid var(--color-blue);
   border-radius: 50%;
-  margin-bottom: 1em;
-}
-.major__icon i {
-  font-size: var(--font-large);
+  margin-bottom: 16px;
   color: var(--color-blue);
 }
+.major__icon:hover i {
+  color: var(--color-dark-pink);
+  transform: rotate(-45deg) scale(1.2);
+}
+.major__icon i {
+  transition: all 300ms ease;
+}
 .major__title {
+  color: var(--color-dark-grey);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin-bottom: 0.5em;
@@ -191,32 +201,29 @@ button {
 }
 
 .about__jobs {
-  text-align: left;
 }
 .job {
-  height: 60px;
+  display: flex;
+  align-items: center;
 }
 .job__logo {
   margin-left: 1em;
 }
+.job__description {
+  margin-left: 16px;
+  text-align: left;
+}
 .job__name {
-  position: relative;
-  top: -50px;
-  left: 70px;
+  color: var(--color-light-grey);
   font-size: var(--font-small);
 }
 .job__period {
-  position: relative;
-  top: -50px;
-  left: 70px;
+  color: var(--color-light-grey);
   font-size: var(--font-micro);
 }
 
 /* Skills */
 #skills {
-  margin-top: 1em;
-  padding: 3em;
-  text-align: center;
   background-color: var(--color-pink);
 }
 #skills > p {
@@ -294,8 +301,6 @@ button {
 
 /* works  */
 #work {
-  margin: 0 1em;
-  text-align: center;
 }
 #work > h3 {
   font-weight: var(--weight-bold);
@@ -348,9 +353,6 @@ button {
 /* testimonials */
 #testimonials {
   background-color: var(--color-light-white);
-  margin-top: 2em;
-  padding: 2em 2em;
-  text-align: center;
 }
 #testimonials > h3 {
   font-weight: var(--weight-semi-bold);
@@ -392,8 +394,6 @@ button {
 /* contact */
 #contact {
   background-color: var(--color-dark-pink);
-  text-align: center;
-  padding-top: 3em;
 }
 #contact > h1 {
   color: var(--color-white);
