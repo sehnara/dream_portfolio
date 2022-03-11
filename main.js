@@ -67,6 +67,21 @@ categoryButtons.addEventListener('click', (e) => {
         projectsContainer.classList.remove('anim-out')},300)
 })
 
+// 6. make button active State
+const categoryButton = document.querySelectorAll('.category__btn')
+categoryButtons.addEventListener('click', (e)=>{
+    const selected = e.target.nodeName === 'BUTTON' ?  e.target.dataset.category : e.target.parentNode.dataset.category ;
+    if (selected===undefined){return}
+    categoryButton.forEach(m => {
+        if(m.dataset.category === selected){
+            m.classList.add('active')
+        }
+        else {
+            m.classList.remove('active')
+        }
+    });
+})
+
 
 
 
