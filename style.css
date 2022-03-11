@@ -330,6 +330,7 @@ button {
   background-color: var(--color-white);
   cursor: pointer;
   font-weight: var(--weight-semi-bold);
+  position: relative;
 }
 .category__btn:hover,
 .category__btn.active {
@@ -353,9 +354,9 @@ button {
   height: 20px;
   line-height: 20px;
 
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 14px;
   opacity: 0;
   transition: all 300ms ease;
 }
@@ -528,6 +529,14 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
   }
@@ -553,6 +562,8 @@ button {
   .about__majors {
     flex-direction: column;
     align-items: center;
+    margin-top: 24px;
+    margin-bottom: 0;
   }
   .major {
     margin-bottom: 38px;
@@ -570,9 +581,31 @@ button {
   .project {
     flex-grow: 1;
   }
+  .comment {
+    flex-direction: column;
+    align-items: center;
+  }
   .comment__avatar {
     width: 100px;
     height: 100px;
+    margin-bottom: 14px;
+  }
+  .comment__avatar:nth-child(odd) {
+    margin-right: 0px;
+  }
+  .comment__avatar:nth-child(even) {
+    margin-left: 0px;
+  }
+  .comment__speech-buble {
+    order: 1;
+    margin: 0 2em;
+  }
+  .section {
+    padding: 16px;
+    padding-top: 60px;
+  }
+  .arrow-button__up {
+    font-size: var(--font-large);
   }
 }
 
