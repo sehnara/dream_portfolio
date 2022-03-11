@@ -2,14 +2,17 @@
 
 // 1. Maek navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
+const navbarMenu = document.querySelector(".navbar__menu");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{    
     let y = window.scrollY
     if(y > navbarHeight){
         navbar.classList.add('navbar--dark')
+        navbarMenu.classList.remove('visible')
     }
     else {
         navbar.classList.remove('navbar--dark')
+        
     }
 }
 )
@@ -36,10 +39,10 @@ arrowButton.addEventListener('click', ()=>{
 })
 document.addEventListener('scroll', ()=>{
     if (window.scrollY > homeHeight/2){
-        arrowButton.classList.add('invisible')
+        arrowButton.classList.add('visible')
     }
     else {
-        arrowButton.classList.remove('invisible')
+        arrowButton.classList.remove('visible')
     }
 })
 
@@ -81,6 +84,15 @@ categoryButtons.addEventListener('click', (e)=>{
         }
     });
 })
+
+// 7. (responsive) navbar is expressed when toggle button is clicked
+const navbarToggle = document.querySelector(".navbar__toggle-btn");
+// navbarMenu는 1번에 있다
+navbarToggle.addEventListener('click', ()=> {
+    navbarMenu.classList.toggle('visible')
+})
+
+
 
 
 
