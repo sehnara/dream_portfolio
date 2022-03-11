@@ -36,12 +36,38 @@ arrowButton.addEventListener('click', ()=>{
 })
 document.addEventListener('scroll', ()=>{
     if (window.scrollY > homeHeight/2){
-        arrowButton.classList.add('visible')
+        arrowButton.classList.add('invisible')
     }
     else {
-        arrowButton.classList.remove('visible')
+        arrowButton.classList.remove('invisible')
     }
 })
+
+// 5. filtering projects
+const categoryButtons = document.querySelector(".work__categories");
+const projectsContainer = document.querySelector(".work__projects")
+const projects = document.querySelectorAll('.project');
+
+categoryButtons.addEventListener('click', (e) => {
+    const category = e.target.dataset.category || e.target.parentNode.dataset.category  
+    if (category == null){
+        return
+    }     
+    
+    projectsContainer.classList.add('anim-out')
+    setTimeout(()=>{
+        projects.forEach(item => {
+            if(item.dataset.category === category || category === 'all'){
+                item.classList.remove('invisible')
+            }
+            else {
+                item.classList.add('invisible')
+            }
+        });
+        projectsContainer.classList.remove('anim-out')},300)
+})
+
+
 
 
 // Utility Function
