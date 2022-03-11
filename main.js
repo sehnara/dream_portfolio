@@ -28,8 +28,20 @@ document.addEventListener('scroll', () => {
     homeContainer.style.setProperty('opacity', opacity)  
 })
 
-
-
+// 4. scroll into top when arrow up button is clicked
+const arrowButton = document.querySelector(".arrow-button__up");
+arrowButton.addEventListener('click', ()=>{
+    const target = document.querySelector('#home');
+    target.scrollIntoView({behavior:"smooth"})
+})
+document.addEventListener('scroll', ()=>{
+    if (window.scrollY > homeHeight/2){
+        arrowButton.classList.add('visible')
+    }
+    else {
+        arrowButton.classList.remove('visible')
+    }
+})
 
 
 // Utility Function
