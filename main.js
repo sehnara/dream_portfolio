@@ -15,12 +15,19 @@ document.addEventListener('scroll', ()=>{
 )
 
 // 2. scroll to any section
-const navbarMenu = document.querySelector(".navbar__menu")
-navbarMenu.addEventListener('click',(event)=>{
-    const e = document.querySelector(event.target.dataset.link);
-    if (e == null) {return}
-    e.scrollIntoView({behavior : 'smooth'});
-}) 
+function scrollToSection(className){
+    const target = document.querySelector(className);
+    target.addEventListener('click', (e)=>{
+        const targetSection = document.querySelector(e.target.dataset.link) 
+        if(targetSection==null) return
+        targetSection.scrollIntoView({behavior : "smooth"})
+    })
+}
+
+scrollToSection(".navbar__menu")
+scrollToSection(".home__contact")
+
+
 
 
 
