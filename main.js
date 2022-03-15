@@ -36,6 +36,7 @@ const arrowButton = document.querySelector(".arrow-button__up");
 arrowButton.addEventListener('click', ()=>{
     const target = document.querySelector('#home');
     target.scrollIntoView({behavior:"smooth"})
+    navMenuActivate(navMenus[sectionIds.indexOf('#home')])
 })
 document.addEventListener('scroll', ()=>{
     if (window.scrollY > homeHeight/2){
@@ -92,10 +93,48 @@ navbarToggle.addEventListener('click', ()=> {
     navbarMenu.classList.toggle('visible')
 })
 
+// 8. menu activating when it is scrolled
+const sectionIds = ['#home','#about','#skills','#work','#testimonials','#contact',]
+const sections = sectionIds.map(id => document.querySelector(id))
+const navMenus = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`))
 
+let selectedIndex = 0;
+let selectedNavItem = navMenus[0]
 
+const option = {
+    root : null,
+    rootMargin : '0px',
+    threshold : 0.3
+}
+function navMenuActivate(selected){
+    selectedNavItem.classList.remove('active')
+    selectedNavItem = selected
+    selectedNavItem.classList.add('active')
+}
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(!entry.isIntersecting && entry.intersectionRatio > 0){
+         const index = sectionIds.indexOf(`#${entry.target.id}`);     
+        //  스크롤링이 아래로 되어서 페이지가 올라옴
+         if(entry.boundingClientRect.y < 0) {
+            selectedIndex = index + 1;
+         }else {
+             selectedIndex = index - 1
+         }
+      }
+    })   
+},option)
 
-
+sections.forEach((section)=>observer.observe(section))
+window.addEventListener('wheel',()=>{
+    if(window.scrollY === 0){
+        selectedIndex = 0
+    }
+    else if(Math.round(window.scrollY + window.innerHeight) === document.body.clientHeight){
+        selectedIndex = navMenus.length-1   
+    }
+    navMenuActivate(navMenus[selectedIndex])
+})
 
 // Utility Function
 function scrollToSection(className){
@@ -103,7 +142,9 @@ function scrollToSection(className){
     target.addEventListener('click', (e)=>{
         const targetSection = document.querySelector(e.target.dataset.link) 
         if(targetSection==null) return
-        targetSection.scrollIntoView({behavior : "smooth"})
+        targetSection.scrollIntoView({behavior : "smooth"});
+        if(className === '.home__contact'){
+        navMenuActivate(navMenus[sectionIds.indexOf('#contact')]);}
     })
 }
 
